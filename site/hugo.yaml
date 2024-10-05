@@ -1,0 +1,89 @@
+baseURL: "https://polyhymnia.daspyro.de/"
+languageCode: en-us
+title: "Polyhymnia"
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+
+menu:
+  main:
+    - identifier: documentation
+      name: Documentation
+      pageRef: /docs
+      weight: 1
+    - identifier: media
+      name: Media
+      pageRef: /media
+      weight: 2
+    - name: Search
+      weight: 3
+      params:
+        type: search
+    - name: GitHub
+      weight: 4
+      url: "https://github.com/pierow2k/polyhymnia"
+      params:
+        icon: github
+
+params:
+  description: Unleashing the magic of words, one query at a time!
+
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: logo-light.svg
+      dark: logo-dark.svg
+      # width: 20
+      # height: 20
+      link: /
+    width: wide
+
+  page:
+    # full (100%), wide (90rem), normal (1280px)
+    width: normal
+
+  theme:
+    # light | dark | system
+    default: dark
+    displayToggle: true
+
+  footer:
+    enable: false
+    displayCopyright: false
+    displayPoweredBy: false
+    width: normal
+
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  search:
+    enable: true
+    type: flexsearch
+
+    flexsearch:
+      index: content
+      # full | forward | reverse | strict
+      # https://github.com/nextapps-de/flexsearch/#tokenizer-prefix-search
+      tokenize: forward
+
+  editURL:
+    enable: true
+    base: "https://github.com/pierow2k/polyhymnia/site/edit/main/content"
+
+  # blog:
+  #   list:
+  #     displayTags: true
+  #     # date | lastmod | publishDate | title | weight
+  #     sortBy: date
+  #     sortOrder: desc # or "asc"
+
+  highlight:
+    copy:
+      enable: true
+      # hover | always
+      display: hover
+
+  comments:
+    enable: false
